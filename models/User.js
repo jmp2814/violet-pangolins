@@ -1,6 +1,5 @@
 //ORM lesson
 const { UUIDV4, Model, DataTypes } = require("sequelize");
-const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const { sequelize } = require("../config/connection");
 
@@ -31,11 +30,11 @@ User.init(
         len: [8],
       },
     },
-    TeacherID: {
-        primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: UUIDV4,
-      },
+    teacherID: {
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: UUIDV4,
+    },
   },
   {
     hooks: {
@@ -45,6 +44,7 @@ User.init(
       },
     },
     sequelize,
+    modelName: "User",
   }
 );
 
