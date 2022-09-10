@@ -22,6 +22,12 @@ Class.init(
         key: "id",
       },
     },
+    class_id: {
+      type: DataType.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true,
+    }
   },
   {
     sequelize,

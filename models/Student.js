@@ -17,8 +17,8 @@ Student.init(
       autoIncrement: true,
       allowNull: false,
       references: {
-        model: "user",
-        key: "id",
+        model: "class",
+        key: "class_id",
       },
     },
   },
