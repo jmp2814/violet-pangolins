@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row row-cols-3 g-4">
+    {{#each classes}}
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" id="title-{{this.className}}">{{this.className}}</h5>
+            {{#if ../loggedIn}}
+              <button class="btn btn-primary" id="btn-{{this.bookId}}">Save Book!</button>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{#if loggedIn}}
+<script src="/js/results.js"></script>
+{{/if}}

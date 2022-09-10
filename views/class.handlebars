@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row row-cols-3 g-4">
+    {{#each classes}}
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5
+              class="card-title"
+              id="title-{{this.className}}"
+            >{{this.className}}</h5>
+            <p class="card-text" id="desc-{{this.className}}">
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
