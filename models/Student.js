@@ -1,7 +1,7 @@
-const { UUIDV4, Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Student extends Model {}
+class Student extends Model { }
 Student.init(
   {
     firstName: {
@@ -12,18 +12,19 @@ Student.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    teacherID: {
-      type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+    id: {
+      type: DataType.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       references: {
-        model: "User",
-        key: "teacherID",
+        model: "user",
+        key: "id",
       },
     },
   },
   {
     sequelize,
+    modelName: "student",
   }
 );
 
