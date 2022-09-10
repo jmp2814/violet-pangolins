@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Jake Perry",
+        "email": "JakeP@hotmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Olesia Chugaieva",
+        "email": "OlesiaC@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Meriem Powell",
+        "email": "MeriemP@aol.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Nick Maier",
+        "email": "NickM@msn.com",
+        "password": "password12345"
+    }
+]
