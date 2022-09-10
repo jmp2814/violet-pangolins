@@ -3,7 +3,7 @@ CREATE DATABASE classManagement;
 
 USE classManagement;
 
-CREATE TABLE teacher (
+CREATE TABLE user (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30),
   last_name VARCHAR(30)  
@@ -20,7 +20,7 @@ CREATE TABLE student (
 CREATE TABLE classroom (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   className VARCHAR(30),  
-  FOREIGN KEY (teacher_id)
-  REFERENCES teacher(id)
+  FOREIGN KEY (user_id)
+  REFERENCES user(id)
   ON DELETE SET NULL
 );

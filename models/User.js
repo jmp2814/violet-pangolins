@@ -32,7 +32,7 @@ User.init(
     },
     id: {
       primaryKey: true,
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
     },
   },
