@@ -33,6 +33,7 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Create one
 router.post("/", async (req, res) => {
   try {
@@ -63,11 +64,13 @@ router.put("/:id", async (req, res) => {
     }
 
     if (!updateclassroomData[0]) {
+
       res
         .status(400)
         .json({
           message: `No classroom data updated for ID: ${req.params.id}`,
         });
+
       return;
     }
 
