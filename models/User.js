@@ -1,4 +1,4 @@
-//ORM lesson
+
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const { sequelize } = require("../config/connection");
@@ -30,7 +30,7 @@ User.init(
                 len: [8],
             },
         },
-        id: {
+        user_id: {
             primaryKey: true,
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -50,3 +50,4 @@ User.init(
 );
 
 module.exports = User;
+

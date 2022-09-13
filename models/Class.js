@@ -1,11 +1,12 @@
+
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Class extends Model {}
+class Classroom extends Model { }
 
-Class.init(
+Classroom.init(
   {
-    className: {
+    classroomName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -13,13 +14,14 @@ Class.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    id: {
+    user_id: {
+      primaryKey: false,
       type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       references: {
         model: "user",
-        key: "id",
+        key: "user_id",
       },
     },
     class_id: {
@@ -31,8 +33,8 @@ Class.init(
   },
   {
     sequelize,
-    modelName: "class",
+    modelName: "Classroom",
   }
 );
 
-module.exports = Class;
+module.exports = Classroom;

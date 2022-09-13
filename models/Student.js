@@ -2,8 +2,6 @@ const { Model, DataTypes } = require("sequelize");
 const { sequelize } = require("../config/connection");
 
 class Student extends Model {}
-
-class Student extends Model {}
 Student.init(
   {
     firstName: {
@@ -15,18 +13,19 @@ Student.init(
       allowNull: false,
     },
     id: {
+      primaryKey: true,
       type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       references: {
-        model: "class",
+        model: "Classroom",
         key: "class_id",
       },
     },
   },
   {
     sequelize,
-    modelName: "student",
+    modelName: "Student",
   }
 );
 
