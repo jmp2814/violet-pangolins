@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 require("dotenv").config();
@@ -21,7 +21,7 @@ if (process.env.JAWSDB_URL) {
 }
 
 const sessionConfig = {
-  secret: process.env.SECRET,
+  secret: 'secret',
   cookie: {
     maxAge: 1 * 60 * 60 * 1000,
     httpOnly: true,
