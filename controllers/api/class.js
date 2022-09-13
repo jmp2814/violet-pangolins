@@ -7,6 +7,7 @@ router.get("/", async (req, res) => {
     const categoryData = await Classroom.findAll({
       include: [{ model: Student }],
     });
+
     res.status(200).json(classroomData);
   } catch {
     res.status(500).json(err);
@@ -63,9 +64,13 @@ router.put("/:id", async (req, res) => {
     }
 
     if (!updateclassroomData[0]) {
-      res.status(400).json({
-        message: `No classroom data updated for ID: ${req.params.id}`,
-      });
+
+      res
+        .status(400)
+        .json({
+          message: `No classroom data updated for ID: ${req.params.id}`,
+        });
+
       return;
     }
 
