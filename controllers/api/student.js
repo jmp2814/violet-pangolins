@@ -9,8 +9,8 @@ router.post("/", async (req, res) => {
 
   try {
     const newStudent = await Student.create({
-      first_name:"",
-      last_name:"",
+      first_name: "",
+      last_name: "",
       author: "",
       class_id,
       user_id,
@@ -19,8 +19,6 @@ router.post("/", async (req, res) => {
     res.json(newStudent);
   } catch (error) {
     console.log("🚀 ~ file: user.js ~ line 26 ~ router.post ~ error", error);
-    return res
-      .status(500)
-      .json({ message: "Something has gone wrong" });
+    return res.status(500).json({ message: "Something has gone wrong" });
   }
 });
