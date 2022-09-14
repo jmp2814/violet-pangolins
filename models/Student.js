@@ -12,7 +12,7 @@ Student.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    id: {
+    student_id: {
       primaryKey: true,
       type: DataTypes.INTEGER,
       autoIncrement: true,
