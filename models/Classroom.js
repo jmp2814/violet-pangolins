@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { sequelize } = require("../config/connection");
 
 class Classroom extends Model {}
 
@@ -16,7 +16,7 @@ Classroom.init(
     user_id: {
       primaryKey: false,
       type: DataTypes.INTEGER,
-      autoIncrement: true,
+      // autoIncrement: true,
       allowNull: false,
       references: {
         model: "user",
